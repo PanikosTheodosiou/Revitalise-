@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 1;
     public float JumpForce = 75;
     public Rigidbody2D rb;
+    public int Jumps = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,19 @@ public class PlayerMovement : MonoBehaviour
             this.transform.Translate(-Speed * Time.deltaTime, 0, 0);
         }
 
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        //"if this is true AND this is true"
+        if (Jumps > 0 && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * JumpForce);
+            Jumps--;
         }
-//
+
+       
+
+
+
+
+
 
 
 
