@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * JumpForce);
         }
-
+//
 
 
 
