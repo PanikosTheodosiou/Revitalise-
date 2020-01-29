@@ -214,8 +214,8 @@ GameObject:
   - component: {fileID: 1518029207}
   - component: {fileID: 1518029206}
   - component: {fileID: 1518029205}
-  - component: {fileID: 1518029208}
   - component: {fileID: 1518029209}
+  - component: {fileID: 1518029208}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -238,6 +238,7 @@ MonoBehaviour:
   Speed: 5
   JumpForce: 200
   rb: {fileID: 1518029208}
+  Jumps: 2
 --- !u!212 &1518029206
 SpriteRenderer:
   m_ObjectHideFlags: 0
