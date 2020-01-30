@@ -7,18 +7,27 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 1;
     public float JumpForce = 75;
     public Rigidbody2D rb;
+    public GameObject SpawnPoint;
  
     //This is for the amount of jumps the player can do
     public int Jumps = 2;
 
+    [Header ("Is Grounded")]
+    public bool IsGrounded;
+
+    Vector3 _startPos;
+
     // Start is called before the first frame update
     void Start()
     {
+        this.transform.position = SpawnPoint.transform.position; 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(rb.velocity);
+
         if (Input.GetKey(KeyCode.D))
         {
             this.transform.Translate(Speed *Time.deltaTime,0,0);  
@@ -37,10 +46,38 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D ColObject)
+    private void OnCollisionExit2D(Collision2D CollisionInfo)
     {
-        Debug.Log("OnCollisionEnter2D" + "collided with: " + ColObject.gameObject.name);
-        Jumps = 2;
+        if (CollisionInfo.gameObject.tag == "Ground")
+        {
+            IsGrounded = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D CollisionInfo)
+    {
+       
+        //ColObject.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1);
+        //Destroy(ColObject.gameObject);
+
+        if (CollisionInfo.gameObject.tag == "Ground")
+        {
+            Jumps = 2;
+            IsGrounded = true;
+            //Debug.Log("OnCollisionEnter2D" + "collided with: " + CollisionInfo.gameObject.name);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Death Barrier")
+        {
+            //Debug.Log("youdied");
+            this.transform.position = SpawnPoint.transform.position;
+        }
+      
+     
     }
 
 }
