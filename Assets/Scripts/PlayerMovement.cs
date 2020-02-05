@@ -17,6 +17,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 _startPos;
 
+    [Header("DEBUG")]
+    public bool DebugMode;
+    public Color HistoryColour;
+    public float HistoryDuration;
+    public bool HistoryPerm = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +33,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(DebugMode)
+        {
+            if(HistoryPerm)
+            Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, Mathf.Infinity);
+            else
+                Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, HistoryDuration);
+        }
         Debug.Log(rb.velocity);
 
         if (Input.GetKey(KeyCode.D))
