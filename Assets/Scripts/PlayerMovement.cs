@@ -8,7 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce = 75;
     public Rigidbody2D rb;
     public GameObject SpawnPoint;
- 
+    public GameObject PlayerProjectile;
+
+    public float ProjectileVelocityMin = 500;
+    public float ProjectileVelocityMax = 999;
+
+
+
     //This is for the amount of jumps the player can do
     public int Jumps = 2;
 
@@ -32,9 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { //Bullet Spawn
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject clonedBullet = Instantiate(PlayerProjectile);
+            clonedBullet.transform.position = this.transform.position + new Vector3 (1.6f,0,0);
+            clonedBullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(ProjectileVelocityMin,ProjectileVelocityMax));
 
-        if(DebugMode)
+        }
+
+
+        if (DebugMode)
         {
             if(HistoryPerm)
             Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, Mathf.Infinity);

@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjSpawn : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
+   void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(this.gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {
