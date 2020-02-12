@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - Death Barrier
   - Projectile
-  - GroundDetection
   layers:
   - Default
   - TransparentFX
