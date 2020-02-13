@@ -23,7 +23,7 @@ public class EnemyAi : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
+       // Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
 
         if (movingRight == true)
         {

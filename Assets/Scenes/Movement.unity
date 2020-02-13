@@ -491,7 +491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365074162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.03, y: -0.486, z: 0}
+  m_LocalPosition: {x: 0.48, y: -0.486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967318188}
@@ -705,7 +705,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820672196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.94, y: 7.27, z: -7.30555}
+  m_LocalPosition: {x: -9.8, y: 7.27, z: -7.30555}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -956,17 +956,17 @@ PrefabInstance:
     - target: {fileID: 2785204393096191570, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.0084
+      value: 0.91145205
       objectReference: {fileID: 0}
     - target: {fileID: 2785204393096191570, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.0084
+      value: 0.91145205
       objectReference: {fileID: 0}
     - target: {fileID: 2785204393096191570, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.0084
+      value: 0.91145205
       objectReference: {fileID: 0}
     - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
@@ -989,6 +989,11 @@ PrefabInstance:
       propertyPath: ProjectileSpawnPoint
       value: 
       objectReference: {fileID: 1365074162}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: HistoryPerm
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2785204393096191571, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
       propertyPath: m_Sprite

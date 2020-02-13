@@ -4,14 +4,32 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-   void OnCollisionEnter2D(Collision2D collision)
+    /*
+    void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("destroybullet" + collision);
         Destroy(this.gameObject);
+
     }
+    */
+
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("GameObject2 collided with " + col.tag);
+        if (col.tag != "Player")
+        {
+            Destroy(this.gameObject);
+        }
+        
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
         
+
     }
 
     // Update is called once per frame

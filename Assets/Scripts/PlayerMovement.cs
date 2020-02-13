@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, HistoryDuration);
         }
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * JumpForce);
             Jumps--;
+           // Jumps = Jumps - 1;
         }
 
     }
