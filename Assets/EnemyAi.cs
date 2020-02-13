@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
 {
+    public float speed;
+    public bool movingRight = true;
+    public Transform groundDetection;
+    public float SwitchDistance = 2;
+
+    public GameObject WayPointA;
+    public GameObject WayPointB;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
 
        // Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
 
@@ -37,8 +45,6 @@ public class EnemyAi : MonoBehaviour
         }
 
       
-=======
-        
->>>>>>> 52a5ebf2c55a3abd7115d1971125df11e364ac11
     }
 }
+
