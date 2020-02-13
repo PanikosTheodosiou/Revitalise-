@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public float ProjectileVelocityMin = 500;
     public float ProjectileVelocityMax = 999;
 
-    public GameObject ProjectileSpawnPoint;
 
 
     //This is for the amount of jumps the player can do
@@ -43,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject clonedBullet = Instantiate(PlayerProjectile);
-            clonedBullet.transform.position = ProjectileSpawnPoint.transform.position;
-            clonedBullet.GetComponent<Rigidbody2D>().AddForce(transform.right * Random.Range(ProjectileVelocityMin,ProjectileVelocityMax));
+            clonedBullet.transform.position = this.transform.position + new Vector3 (1.6f,0,0);
+            clonedBullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(ProjectileVelocityMin,ProjectileVelocityMax));
 
         }
 
@@ -60,16 +59,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            this.transform.rotation = Quaternion.Euler(0, 0, 0);
             this.transform.Translate(Speed *Time.deltaTime,0,0);  
         }
         if (Input.GetKey(KeyCode.A))
         {
-            this.transform.rotation = Quaternion.Euler(0, 180, 0);
-            this.transform.Translate(Speed * Time.deltaTime, 0, 0);
-           
+            this.transform.Translate(-Speed * Time.deltaTime, 0, 0);
         }
-
 
         //"if this is true AND this is true"
         if (Jumps > 0 && Input.GetKeyDown(KeyCode.Space))
