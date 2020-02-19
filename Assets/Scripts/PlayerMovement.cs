@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     public Color HistoryColour;
     public float HistoryDuration;
     public bool HistoryPerm = true;
+    public GameObject enemyOne;
+    public GameObject enemyTwo;
 
 
     // Start is called before the first frame update
@@ -45,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
             GameObject clonedBullet = Instantiate(PlayerProjectile);
             clonedBullet.transform.position = ProjectileSpawnPoint.transform.position;
             clonedBullet.GetComponent<Rigidbody2D>().AddForce(transform.right * Random.Range(ProjectileVelocityMin,ProjectileVelocityMax));
+            clonedBullet.GetComponent<Bullet>().EnemyOne = enemyOne;
+            clonedBullet.GetComponent<Bullet>().EnemyTwo = enemyTwo;
 
         }
 
