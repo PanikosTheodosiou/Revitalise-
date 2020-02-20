@@ -4,41 +4,53 @@ using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-<<<<<<< HEAD
+    //public AudioClip test;
 
-       // Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
+    //private void Start()
+    //{
+    //    AudioManager.Instance.Play(test);
+    //}
 
-        if (movingRight == true)
-        {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+    //void Punched()
+    //{
 
-            if (Vector2.Distance(this.transform.position, WayPointA.transform.position) <= SwitchDistance)
-            {
-                movingRight = false;
-            }
-        }
-        else
-        {
-            transform.Translate(Vector2.right * -speed * Time.deltaTime);
+    //}
+    //    // Start is called before the first frame update
+    //    void Start()
+    //    {
 
-            if (Vector2.Distance(this.transform.position, WayPointB.transform.position) <= SwitchDistance)
-            {
-                movingRight = true;
-            }
-        }
+    //    }
 
-      
-=======
-        
->>>>>>> 52a5ebf2c55a3abd7115d1971125df11e364ac11
-    }
+    //    // Update is called once per frame
+    //    void Update()
+    //    {
+    //<<<<<<< HEAD
+
+    //       // Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
+
+    //        if (movingRight == true)
+    //        {
+    //            transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+    //            if (Vector2.Distance(this.transform.position, WayPointA.transform.position) <= SwitchDistance)
+    //            {
+    //                movingRight = false;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            transform.Translate(Vector2.right * -speed * Time.deltaTime);
+
+    //            if (Vector2.Distance(this.transform.position, WayPointB.transform.position) <= SwitchDistance)
+    //            {
+    //                movingRight = true;
+    //            }
+    //        }
+
+
+    //=======
+
+    //>>>>>>> 52a5ebf2c55a3abd7115d1971125df11e364ac11
+    //    }
 }
