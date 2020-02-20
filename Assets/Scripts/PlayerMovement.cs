@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             clonedBullet.GetComponent<Bullet>().EnemyOne = enemyOne;
             clonedBullet.GetComponent<Bullet>().EnemyTwo = enemyTwo;
 
+
         }
 
 
