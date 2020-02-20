@@ -130,8 +130,8 @@ GameObject:
   m_Component:
   - component: {fileID: 740366959}
   - component: {fileID: 740366962}
-  - component: {fileID: 740366961}
   - component: {fileID: 740366960}
+  - component: {fileID: 740366961}
   m_Layer: 0
   m_Name: Testing uses only mario sprite
   m_TagString: Untagged
@@ -163,10 +163,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ee1b0b16261691e4a8de2770a5defbd9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.73
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -239,7 +239,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -261,12 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de69bbbc103bd642b7049ca63250fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  Clip: {fileID: 8300000, guid: fa29dd6389f2cb2488b2159d1a684e89, type: 3}
-  volume: 0.7
-  pitch: 1
-  randomVolume: 0.1
-  randomPitch: 0.1
 --- !u!212 &740366962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -488,6 +482,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2003805826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1beb4d2fb7c98a04caf461e919ce3362, type: 3}
+  m_Script: {fileID: 11500000, guid: 4de69bbbc103bd642b7049ca63250fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
