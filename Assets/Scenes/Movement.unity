@@ -94,8 +94,9 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -512,6 +513,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -523,6 +525,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -635,6 +638,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -646,6 +650,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -727,6 +732,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -738,6 +744,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -875,11 +882,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1502937459}
     m_Modifications:
-    - target: {fileID: 1383743174763546554, guid: d5b9801462705a54e8d9405ba7abe9c4,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 1383743174763546552, guid: d5b9801462705a54e8d9405ba7abe9c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -949,6 +951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6088429
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383743174763546554, guid: d5b9801462705a54e8d9405ba7abe9c4,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b9801462705a54e8d9405ba7abe9c4, type: 3}
@@ -1090,6 +1097,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1101,6 +1109,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1145,11 +1154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 29849756}
     m_Modifications:
-    - target: {fileID: 1383743174763546554, guid: d5b9801462705a54e8d9405ba7abe9c4,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 1383743174763546552, guid: d5b9801462705a54e8d9405ba7abe9c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1220,6 +1224,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.598379
       objectReference: {fileID: 0}
+    - target: {fileID: 1383743174763546554, guid: d5b9801462705a54e8d9405ba7abe9c4,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b9801462705a54e8d9405ba7abe9c4, type: 3}
 --- !u!1001 &2785204394333853637
@@ -1229,6 +1238,47 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 1820672196}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: PlayerProjectile
+      value: 
+      objectReference: {fileID: 7383547567589944805, guid: c13799f6223e6e547ba5a9e54118203c,
+        type: 3}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: ProjectileVelocityMin
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: ProjectileSpawnPoint
+      value: 
+      objectReference: {fileID: 1365074162}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: HistoryPerm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: enemyTwo
+      value: 
+      objectReference: {fileID: 1743209424}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: enemyOne
+      value: 
+      objectReference: {fileID: 852533613}
+    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
+        type: 3}
+      propertyPath: JumpForce
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 2785204393096191569, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
       propertyPath: m_Name
@@ -1304,42 +1354,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.91145205
       objectReference: {fileID: 0}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: SpawnPoint
-      value: 
-      objectReference: {fileID: 1820672196}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: PlayerProjectile
-      value: 
-      objectReference: {fileID: 7383547567589944805, guid: c13799f6223e6e547ba5a9e54118203c,
-        type: 3}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: ProjectileVelocityMin
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: ProjectileSpawnPoint
-      value: 
-      objectReference: {fileID: 1365074162}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: HistoryPerm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: enemyTwo
-      value: 
-      objectReference: {fileID: 1743209424}
-    - target: {fileID: 2785204393096191568, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
-        type: 3}
-      propertyPath: enemyOne
-      value: 
-      objectReference: {fileID: 852533613}
     - target: {fileID: 2785204393096191571, guid: 02eb7e4eaba6ad2429fea6b88ad9f98d,
         type: 3}
       propertyPath: m_Sprite
