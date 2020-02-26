@@ -8,6 +8,7 @@ TagManager:
   - Death Barrier
   - Projectile
   - GroundDetection
+  - 'Enemy '
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,6 @@ public class EnemyAi : MonoBehaviour
 {
     public float speed;
     public bool movingRight = true;
-    public Transform groundDetection;
     public float SwitchDistance = 2;
 
     public GameObject WayPointA;
@@ -28,7 +27,7 @@ public class EnemyAi : MonoBehaviour
         if (movingRight == true)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-
+            Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
             if (Vector2.Distance(this.transform.position, WayPointA.transform.position) <= SwitchDistance)
             {
                 movingRight = false;

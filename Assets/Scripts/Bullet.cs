@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public float proxone;
     public float proxtwo;
     public GameObject target;
+    public float destroyTime;
 
     /*
     void OnCollisionEnter2D(Collision2D collision)
@@ -32,10 +33,11 @@ public class Bullet : MonoBehaviour
     }
 
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject, destroyTime);
 
     }
     void LookAt2D(GameObject target)
@@ -48,6 +50,11 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (EnemyOne == null || EnemyTwo == null)
+        {
+            return;
+        }
 
         this.transform.Translate(Vector3.right * 5 * Time.deltaTime);
         proxone = Vector2.Distance(this.transform.position, EnemyOne.transform.position);
