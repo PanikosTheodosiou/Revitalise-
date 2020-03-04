@@ -15,7 +15,7 @@ public class MenuPanel : MonoBehaviour
     void Start()
     {
         startButton.localScale = optionsButton.localScale = quitToDesktopButton.localScale = Vector3.zero;
-        LeanTween.move(theMenu, new Vector3(75, 0, 0), time).setEaseInOutElastic().setOnComplete(OnMenuFinish);
+        LeanTween.move(theMenu, new Vector3(150, 0, 0), time).setEaseInOutElastic().setOnComplete(OnMenuFinish);
     }
 
     // Update is called once per frame
