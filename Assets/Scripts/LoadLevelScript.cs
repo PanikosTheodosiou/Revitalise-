@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LoadLevelScript : MonoBehaviour
 {
+    public int level;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,6 @@ public class LoadLevelScript : MonoBehaviour
     }
     public void loadLevel()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(level);
     }
 }
