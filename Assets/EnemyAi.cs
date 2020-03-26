@@ -8,42 +8,48 @@ public class EnemyAi : MonoBehaviour
     public bool movingRight = true;
     public float SwitchDistance = 2;
 
-    public GameObject WayPointA;
-    public GameObject WayPointB;
+    public int currentWaypoint;
+    public List<GameObject> Waypoints = new List<GameObject>();
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
 
-       // Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
-
-        if (movingRight == true)
+        if(Vector2.Distance(this.transform.position, Waypoints[currentWaypoint].transform.position) >= SwitchDistance)
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            Debug.Log(Vector2.Distance(this.transform.position, WayPointA.transform.position));
-            if (Vector2.Distance(this.transform.position, WayPointA.transform.position) <= SwitchDistance)
-            {
-                movingRight = false;
-            }
+            transform.position = Vector2.MoveTowards(transform.position, Waypoints[currentWaypoint].transform.position, speed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(Vector2.right * -speed * Time.deltaTime);
+            currentWaypoint++;
 
-            if (Vector2.Distance(this.transform.position, WayPointB.transform.position) <= SwitchDistance)
-            {
-                movingRight = true;
-            }
+            if (currentWaypoint > Waypoints.Count - 1)
+                currentWaypoint = 0;
         }
 
-      
+
+        //if (movingRight == true)
+        //{
+
+        //    transform.position = Vector2.MoveTowards(transform.position, WayPointA.transform.position, speed * Time.deltaTime);
+
+        //    if (Vector2.Distance(this.transform.position, WayPointA.transform.position) <= SwitchDistance)
+        //    {
+        //        movingRight = false;
+        //    }
+        //}
+        //else
+        //{
+        //    transform.position = Vector2.MoveTowards(transform.position, WayPointB.transform.position, speed * Time.deltaTime);
+
+        //    if (Vector2.Distance(this.transform.position, WayPointB.transform.position) <= SwitchDistance)
+        //    {
+        //        movingRight = true;
+        //    }
+        //}
+
+
     }
 }
 
