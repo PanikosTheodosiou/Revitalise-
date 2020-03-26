@@ -22,7 +22,7 @@ public class EnemyAi : MonoBehaviour
         }
         else
         {
-            currentWaypoint++;
+            currentWaypoint+=1;
 
             if (currentWaypoint > Waypoints.Count - 1)
                 currentWaypoint = 0;
