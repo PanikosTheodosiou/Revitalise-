@@ -5,13 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public EnemyAi[] enemies;
-    public GameObject EnemyOne;
-    public GameObject EnemyTwo;
-    public float proxone;
-    public float proxtwo;
-    public GameObject target;
     public float destroyTime;
+    public float velocity;
+    public float speed;
 
+    //public List<EnemyAi>
     /*
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -29,7 +27,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+
     }
 
 
@@ -37,7 +35,9 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, destroyTime);
+
+
+      //  Destroy(this.gameObject, destroyTime);
 
     }
     void LookAt2D(GameObject target)
@@ -51,28 +51,70 @@ public class Bullet : MonoBehaviour
     void Update()
     {
 
-        if (EnemyOne == null || EnemyTwo == null)
+        enemies = GameObject.FindObjectsOfType<EnemyAi>();
+
+        this.transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+        if (enemies.Length < 1)
         {
             return;
         }
 
-        this.transform.Translate(Vector3.right * 5 * Time.deltaTime);
-        proxone = Vector2.Distance(this.transform.position, EnemyOne.transform.position);
-        proxtwo = Vector2.Distance(this.transform.position, EnemyTwo.transform.position);
-        
+        //Pick out a enemy to compare others agaisnt
+        GameObject closestEnemy = enemies[0].gameObject;
 
-        if (proxone < proxtwo)
+        //A for loop to cycle through each enemy within the list if theres 5 enemies this will loop 5 times , 
+        //the int i will also increment each loop "i++ is the same as +1"
+
+        for (int i = 0; i < enemies.Length; i++)
         {
-            target = EnemyOne;
-            Debug.Log("EnemyOne");
-            Debug.DrawLine(transform.position, EnemyOne.transform.position, Color.white);
+            //if the closest Enemy is not the same to the current element within the enemies list
+
+            if (enemies[i].gameObject != closestEnemy)
+            {
+                //we find the distance between the current closest enemy and the currently cycled element
+
+                float closestEnemyDistance = Vector2.Distance(this.transform.position, closestEnemy.transform.position);
+                float nextEnemyDistance = Vector2.Distance(this.transform.position, enemies[i].transform.position);
+
+
+                if (!(closestEnemyDistance < nextEnemyDistance))
+                {
+                    closestEnemy = enemies[i].gameObject;
+                }
+
+
+                // now from the distance values pick which enemy is the closest then assign it as the current target
+
+                Debug.Log("closestEnemyDistance :" + closestEnemyDistance.ToString() + "  nextEnemyDistance :" + nextEnemyDistance.ToString());
+
+
+            }
+
+
+
         }
-        else
-        {
-            target = EnemyTwo;
-            Debug.Log("EnemyTwo");
-            Debug.DrawLine(transform.position, EnemyTwo.transform.position, Color.gray);
-        }
-        LookAt2D(target);
+
+
+        //proxone = Vector2.Distance(this.transform.position, EnemyOne.transform.position);
+        //proxtwo = Vector2.Distance(this.transform.position, EnemyTwo.transform.position);
+
+
+        //if (proxone < proxtwo)
+        //{
+        //    target = EnemyOne;
+        //    Debug.Log("EnemyOne");
+        //    Debug.DrawLine(transform.position, EnemyOne.transform.position, Color.white);
+        //}
+        //else
+        //{
+        //    target = EnemyTwo;
+        //    Debug.Log("EnemyTwo");
+        //    Debug.DrawLine(transform.position, EnemyTwo.transform.position, Color.gray);
+        //}
+
+
+        Debug.DrawLine(transform.position, closestEnemy.transform.position, Color.yellow);
+        LookAt2D(closestEnemy);
     }
 }

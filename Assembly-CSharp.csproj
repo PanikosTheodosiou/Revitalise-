@@ -104,7 +104,6 @@
     <Compile Include="Assets\Scripts\LoadLevelScript.cs" />
     <Compile Include="Assets\Scripts\MenuPanel.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Splashscreen.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Testing.cs" />

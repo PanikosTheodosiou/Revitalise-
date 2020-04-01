@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float ProjectileVelocityMax = 999;
 
     public GameObject ProjectileSpawnPoint;
-
+    
 
     //This is for the amount of jumps the player can do
     public int Jumps = 2;
@@ -46,9 +46,9 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject clonedBullet = Instantiate(PlayerProjectile);
             clonedBullet.transform.position = ProjectileSpawnPoint.transform.position;
-            clonedBullet.GetComponent<Rigidbody2D>().AddForce(transform.right * Random.Range(ProjectileVelocityMin,ProjectileVelocityMax));
-            clonedBullet.GetComponent<Bullet>().EnemyOne = enemyOne;
-            clonedBullet.GetComponent<Bullet>().EnemyTwo = enemyTwo;
+            //clonedBullet.GetComponent<Rigidbody2D>().AddForce(transform.right * Random.Range(ProjectileVelocityMin,ProjectileVelocityMax));
+            //clonedBullet.GetComponent<Bullet>().EnemyOne = enemyOne;
+            //clonedBullet.GetComponent<Bullet>().EnemyTwo = enemyTwo;
 
 
         }
