@@ -64,8 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraFollow.cs" />
-    <Compile Include="Assets\EnemyAi.cs" />
-    <Compile Include="Assets\Health.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingPunch.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
@@ -101,6 +99,8 @@
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\EnemyAi.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\LoadLevelScript.cs" />
     <Compile Include="Assets\Scripts\MenuPanel.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
