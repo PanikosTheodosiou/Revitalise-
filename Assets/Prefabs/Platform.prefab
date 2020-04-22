@@ -75,13 +75,11 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: 3bab026df42df40a5a6b43d96aac577a, type: 3}
-  m_Sprites:
-  - {fileID: 1887494081247492234, guid: d501f6d7fa84c4038b7449696f44ff38, type: 3}
-  - {fileID: -4069628985407814602, guid: a4fef30bb3ca5463a9c33c123a81604a, type: 3}
+  m_ShapeTexture: {fileID: 0}
+  m_Sprites: []
   m_LocalAABB:
-    m_Center: {x: 32.53936, y: 7.976366, z: -0.00501}
-    m_Extent: {x: 32.53936, y: 7.976366, z: 0.00501}
+    m_Center: {x: 32.235718, y: 7.6818066, z: 0}
+    m_Extent: {x: 32.235718, y: 7.6818066, z: 0}
 --- !u!114 &6575423530210600900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +131,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-  m_SpriteShape: {fileID: 11400000, guid: 18082d4b1dde54612b6ce63fd49c9014, type: 2}
+  m_SpriteShape: {fileID: 0}
   m_FillPixelPerUnit: 11.2
   m_StretchTiling: 1
   m_SplineDetail: 16
@@ -163,10 +161,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 24.132063, y: 15.087476}
-  - {x: 64.382935, y: 15.364791}
-  - {x: 64.47268, y: 11.122565}
-  - {x: 24.546236, y: 11.039617}
-  - {x: 24.030132, y: 11.038906}
-  - {x: 24.132034, y: 15.086338}
-  - {x: 24.132063, y: 15.087476}
+  - {x: 24.133232, y: 15.086315}
+  - {x: 64.381775, y: 15.363613}
+  - {x: 64.471436, y: 11.123764}
+  - {x: 24.03099, y: 11.039745}
+  - {x: 24.128263, y: 14.889683}
+  - {x: 24.13193, y: 15.0347595}
+  - {x: 24.133232, y: 15.086315}
