@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,12 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public float ProjectileVelocityMax = 999;
 
     public GameObject ProjectileSpawnPoint;
-    
+    public UnityEvent onDeath;
+
 
     //This is for the amount of jumps the player can do
     public int Jumps = 2;
 
-    [Header ("Is Grounded")]
+    [Header("Is Grounded")]
     public bool IsGrounded;
 
     Vector3 _startPos;
@@ -31,17 +33,22 @@ public class PlayerMovement : MonoBehaviour
     public bool HistoryPerm = true;
     public GameObject enemyOne;
     public GameObject enemyTwo;
+    public bool dead;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.position = SpawnPoint.transform.position; 
+        this.transform.position = SpawnPoint.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     { //Bullet Spawn
+
+        if (dead)
+            return;
+
         if (Input.GetMouseButtonDown(0))
         {
             GameObject clonedBullet = Instantiate(PlayerProjectile);
@@ -56,8 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (DebugMode)
         {
-            if(HistoryPerm)
-            Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, Mathf.Infinity);
+            if (HistoryPerm)
+                Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, Mathf.Infinity);
             else
                 Debug.DrawLine(transform.position, transform.position + Vector3.up * .2f, HistoryColour, HistoryDuration);
         }
@@ -66,13 +73,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            this.transform.Translate(Speed *Time.deltaTime,0,0);  
+            this.transform.Translate(Speed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.rotation = Quaternion.Euler(0, 180, 0);
             this.transform.Translate(Speed * Time.deltaTime, 0, 0);
-           
+
         }
 
 
@@ -81,10 +88,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * JumpForce);
             Jumps--;
-           // Jumps = Jumps - 1;
+            // Jumps = Jumps - 1;
         }
+        
 
     }
+    
 
     private void OnCollisionExit2D(Collision2D CollisionInfo)
     {
@@ -96,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
-       
+
         //ColObject.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1);
         //Destroy(ColObject.gameObject);
 
@@ -106,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
             IsGrounded = true;
             //Debug.Log("OnCollisionEnter2D" + "collided with: " + CollisionInfo.gameObject.name);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -116,8 +126,21 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("youdied");
             this.transform.position = SpawnPoint.transform.position;
         }
-      
-     
+
+        if (collision.gameObject.tag == "Enemy ")
+        {
+            //this.transform.position = SpawnPoint.transform.position;
+            dead = true;
+            onDeath.Invoke();
+
+
+
+        }
+
+
     }
 
+
 }
+
+

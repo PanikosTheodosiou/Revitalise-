@@ -8,6 +8,9 @@ public class Bullet : MonoBehaviour
     public float destroyTime;
     public float velocity;
     public float speed;
+    Renderer m_Renderer;
+    public float distanceTrack = 10;
+    bool lockOn = false;
 
     //public List<EnemyAi>
     /*
@@ -35,25 +38,9 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-      //  Destroy(this.gameObject, destroyTime);
-
-    }
-    void LookAt2D(GameObject target)
-    {
-        var dir = target.transform.position - transform.position;
-        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-    }
-    // Update is called once per frame
-    void Update()
-    {
+        m_Renderer = GetComponent<Renderer>();
 
         enemies = GameObject.FindObjectsOfType<EnemyAi>();
-
-        this.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
         if (enemies.Length < 1)
         {
@@ -96,6 +83,35 @@ public class Bullet : MonoBehaviour
         }
 
 
+        Debug.DrawLine(transform.position, closestEnemy.transform.position, Color.yellow);
+
+        if (Vector2.Distance(transform.position, closestEnemy.transform.position) < distanceTrack)
+        {
+            LookAt2D(closestEnemy);
+        }
+
+    }
+    //  Destroy(this.gameObject, destroyTime);
+
+
+    void LookAt2D(GameObject target)
+    {
+        var dir = target.transform.position - transform.position;
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+  
+
+        this.transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+
+
+
         //proxone = Vector2.Distance(this.transform.position, EnemyOne.transform.position);
         //proxtwo = Vector2.Distance(this.transform.position, EnemyTwo.transform.position);
 
@@ -114,7 +130,5 @@ public class Bullet : MonoBehaviour
         //}
 
 
-        Debug.DrawLine(transform.position, closestEnemy.transform.position, Color.yellow);
-        LookAt2D(closestEnemy);
     }
 }

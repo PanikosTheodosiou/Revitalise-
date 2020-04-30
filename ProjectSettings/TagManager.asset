@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - GroundDetection
   - 'Enemy '
+  - AI
   layers:
   - Default
   - TransparentFX
