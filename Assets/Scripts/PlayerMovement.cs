@@ -121,6 +121,8 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        Debug.LogError("collided with : "+ collision.gameObject.name);
+
         if (collision.gameObject.tag == "Death Barrier")
         {
             //Debug.Log("youdied");
