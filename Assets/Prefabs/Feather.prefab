@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7687831345471520873}
   - component: {fileID: 7687831345471521686}
   - component: {fileID: 1891069460417401386}
+  - component: {fileID: 3795159090572632876}
   m_Layer: 0
   m_Name: Feather
   m_TagString: Untagged
@@ -124,3 +125,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!58 &3795159090572632876
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687831345471520872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.7684721, y: 0.9196228}
+  serializedVersion: 2
+  m_Radius: 11.654755

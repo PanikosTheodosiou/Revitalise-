@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6519834565856877109}
   - component: {fileID: 6519834565856877108}
   - component: {fileID: 6769429831922694985}
+  - component: {fileID: 7192940753989139731}
   m_Layer: 0
   m_Name: Seed
   m_TagString: Untagged
@@ -124,3 +125,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!58 &7192940753989139731
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519834565856877114}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.3266454, y: 1.0544394}
+  serializedVersion: 2
+  m_Radius: 28.14282

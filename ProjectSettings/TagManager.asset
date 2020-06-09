@@ -10,6 +10,9 @@ TagManager:
   - GroundDetection
   - 'Enemy '
   - AI
+  - Pick Up
+  - Pick Up 2
+  - Pick Up 3
   layers:
   - Default
   - TransparentFX
