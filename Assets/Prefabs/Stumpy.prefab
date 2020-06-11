@@ -466,9 +466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23d8ad33f8a8fa4797385b1d56bc60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  startHp: 10
   bullet: {fileID: 0}
   healthBar: {fileID: 3241347403201486713}
+  deathParticle: {fileID: 0}
 --- !u!61 &7094747401146650853
 BoxCollider2D:
   m_ObjectHideFlags: 0

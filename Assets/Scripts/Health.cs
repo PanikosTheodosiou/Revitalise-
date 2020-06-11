@@ -5,26 +5,28 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int hp;
+    public float startHp = 100;
+    private float hp;
     public GameObject bullet;
     public Image healthBar;
+    public ParticleSystem deathParticle;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        hp = startHp;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        
 
         if (hp < 1)
         {
             Kill();
         }
-        healthBar.fillAmount = hp / 100f;
+        healthBar.fillAmount = hp / startHp;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +39,10 @@ public class Health : MonoBehaviour
 
     void Kill()
     {
+        
         Destroy(this.gameObject);
+        Instantiate(deathParticle, transform.position, Quaternion.identity);
+
     }
 
 }
