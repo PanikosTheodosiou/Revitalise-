@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject ProjectileSpawnPoint;
     public UnityEvent onDeath;
-
+    public GameObject particleTrigger;
+    public ParticleSystem endEffect;
 
     //This is for the amount of jumps the player can do
     public int Jumps = 2;
@@ -138,6 +139,8 @@ public class PlayerMovement : MonoBehaviour
 
 
         }
+       endEffect.Play(endEffect);
+
 
 
     }

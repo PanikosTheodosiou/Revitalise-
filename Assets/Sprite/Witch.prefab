@@ -143,9 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23d8ad33f8a8fa4797385b1d56bc60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 70
+  startHp: 100
   bullet: {fileID: 0}
   healthBar: {fileID: 7633501808457953423}
+  deathParticle: {fileID: 0}
 --- !u!114 &4052999069205854335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +309,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2557946616840135456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.636989}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.30486584, y: 0.31268206, z: 0.31268206}
   m_Children:
   - {fileID: 1333330795251742408}
@@ -317,8 +318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.04, y: 10.23}
-  m_SizeDelta: {x: 23.01, y: 1.646}
+  m_AnchoredPosition: {x: -0.103, y: 9.658}
+  m_SizeDelta: {x: 22.072, y: 5.303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2866264533735248275
 Canvas:
@@ -480,7 +481,7 @@ RectTransform:
   m_GameObject: {fileID: 5790026876979510188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9568, y: 1.9568, z: 1.9568}
   m_Children:
   - {fileID: 6417454087340116826}
   m_Father: {fileID: 8364483548699282745}

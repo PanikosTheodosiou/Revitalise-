@@ -13,6 +13,7 @@ TagManager:
   - Pick Up
   - Pick Up 2
   - Pick Up 3
+  - END
   layers:
   - Default
   - TransparentFX

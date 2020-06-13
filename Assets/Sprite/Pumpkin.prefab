@@ -270,9 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23d8ad33f8a8fa4797385b1d56bc60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 30
+  startHp: 100
   bullet: {fileID: 0}
   healthBar: {fileID: 1268338737723936365}
+  deathParticle: {fileID: 0}
 --- !u!114 &485959616602689529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +447,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6631469490692258257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9.10319}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.052432, y: 1.0794145, z: 1.0794145}
   m_Children:
   - {fileID: 1417582525937616201}
