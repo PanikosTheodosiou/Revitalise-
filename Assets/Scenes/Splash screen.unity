@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 301034942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1857, y: 2.1857, z: 2.1857}
   m_Children:
   - {fileID: 1705932005}
   m_Father: {fileID: 1759688737}
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 19.9}
+  m_AnchoredPosition: {x: 0, y: 2.1140747}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &301034944
@@ -397,7 +397,7 @@ RectTransform:
   m_GameObject: {fileID: 1307684992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85692, y: 0.85692, z: 0.85692}
+  m_LocalScale: {x: 1.0232482, y: 1.0232482, z: 1.0232482}
   m_Children: []
   m_Father: {fileID: 1759688737}
   m_RootOrder: 0
@@ -405,7 +405,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.00057983, y: 0.00072479}
-  m_SizeDelta: {x: 1122.6, y: 631.33}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307684994
 MonoBehaviour:
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4328100460bd18a45a15b80462a21190, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b1b897ae711144e9191c6927ac814a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
