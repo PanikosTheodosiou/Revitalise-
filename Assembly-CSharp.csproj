@@ -98,6 +98,7 @@
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
+    <Compile Include="Assets\Pause.cs" />
     <Compile Include="Assets\PickUp.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\Scripts\Quit.cs" />
     <Compile Include="Assets\Scripts\Splashscreen.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Settings.cs" />
     <None Include="Assets\LeanTween\ReadMe.txt" />
     <None Include="Assets\New Text Document.txt" />
     <None Include="Assets\LeanTween\License.txt" />
