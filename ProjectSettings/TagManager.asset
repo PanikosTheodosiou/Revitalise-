@@ -14,6 +14,7 @@ TagManager:
   - Pick Up 2
   - Pick Up 3
   - END
+  - canvasend
   layers:
   - Default
   - TransparentFX
