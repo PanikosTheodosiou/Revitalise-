@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float ProjectileVelocityMax = 999;
 
     public GameObject ProjectileSpawnPoint;
+    public UnityEvent onEnd;
     public UnityEvent onDeath;
     public GameObject particleTrigger;
     public ParticleSystem endEffect;
@@ -126,8 +127,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "Death Barrier")
         {
+            dead = true;
+            onDeath.Invoke();
             //Debug.Log("youdied");
-            this.transform.position = SpawnPoint.transform.position;
+           // this.transform.position = SpawnPoint.transform.position;
         }
 
         if (collision.gameObject.tag == "Enemy ")
@@ -135,11 +138,22 @@ public class PlayerMovement : MonoBehaviour
             //this.transform.position = SpawnPoint.transform.position;
             dead = true;
             onDeath.Invoke();
+           
 
 
 
         }
-       endEffect.Play(endEffect);
+        if (collision.gameObject.tag == "CanvasEnd")
+        {
+            //this.transform.position = SpawnPoint.transform.position;
+            dead = true;
+            
+            onEnd.Invoke();
+
+
+
+        }
+        endEffect.Play(endEffect);
 
 
 
