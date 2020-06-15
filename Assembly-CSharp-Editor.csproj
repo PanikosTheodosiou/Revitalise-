@@ -63,7 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
+    <Compile Include="Assets\Editor\DeletePlayerPref.cs" />
+    <Compile Include="Assets\Editor\LeanTweenDocumentationEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>D:/New Unity Projects/Revitalise-/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
